@@ -8,16 +8,16 @@ const NavBar = () => {
   return (
     <div>
       <nav className="three">
-        <Link className="link" to="">
+        <Link className="link" to="/dashbord">
           <RiAppsFill  style={{ color: "#fdcc00" }} />
         </Link>
-        <Link className="link" to="">
+        <Link className="link" to="/movieList">
           <BsGrid1X2Fill className="link" style={{ color: "#fdcc00" }} />
         </Link>
-        <Link className="link" to="">
+        <Link className="link" to="/addMovie">
           <BsCloudPlusFill className="link" style={{ color: "#fdcc00" }} />
         </Link>
-        <Link className="link" to="">
+        <Link className="link" to="/search">
           <BiSearchAlt className="link" style={{ color: "#fdcc00" }} />
         </Link>
       </nav>

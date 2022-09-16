@@ -1,5 +1,5 @@
 import React from "react";
-import {GiClick} from " react-icons/bs"
+
 
 
 const Dashboard = () => {
@@ -10,7 +10,7 @@ const Dashboard = () => {
           <h1>Welcome to Movies House</h1>
           <span>Where you can find any movie you want</span>
 
-          <button> Show me <GiClick></GiClick></button>
+          <button> Show me </button>
 
         </div>
       </div>

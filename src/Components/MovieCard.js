@@ -1,9 +1,11 @@
 import React from "react";
 import "./MovieCard.css";
-
-const MovieCard = ({title, description, imageUrl, date}) => {
+import {Link} from 'react-router-dom'
+const MovieCard = ({title, description, imageUrl, date,id}) => {
+  console.log(id)
   return (
     <div>
+      <Link to={`/movieDetails/${id}`}>
       <div className="card">
         <a href="#">
           <img className="img1" alt="movie" src={imageUrl}/>
@@ -22,6 +24,7 @@ const MovieCard = ({title, description, imageUrl, date}) => {
           </a>
         </a>
       </div>
+      </Link> 
     </div>
   );
 };

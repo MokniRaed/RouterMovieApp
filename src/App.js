@@ -8,6 +8,8 @@ import Search from "./Components/Search";
 import Rate from "./Components/Rate";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import Dashboard from "./Components/Dashboard";
+import MovieDetails from "./Components/MovieDetails";
 
 function App() {
   //******This is the Api *******/
@@ -75,7 +77,7 @@ function App() {
     {
       _id: "5fedf0cf7c0ffe00176db1cf",
       title: "KILL BILL: VOL. 1",
-      rate: 5,
+      rate: 1,
       date: "2003",
       imgUrl:
         "https://i.pinimg.com/564x/32/49/1c/32491ccd2f4ce577dea8871988c5828c.jpg",
@@ -116,7 +118,6 @@ function App() {
     setMovies([...Movies, Movie]);
   };
 
-  console.log(Movies);
   return (
     <>
       <div className="App">
@@ -132,9 +133,19 @@ function App() {
               />
             }
           />
+          <Route path="/dashbord"
+          element={
+            <Dashboard/>
+          }
+          />
+          <Route path="/addMovie" element={<AddMovie AddToMovie={AddToMovie}/>}/>
+          <Route path="/search" element={<Search Movies={Movies} searchName={searchName}
+                searchRate={searchRate} setSearchName={setSearchName} setSearchRate={setSearchRate} />} />
+          <Route path="/movieDetails/:id" element ={<MovieDetails Movies={Movies}   />}/>
+          
         </Routes>
 
-        <Search setSearchName={setSearchName} setSearchRate={setSearchRate} />
+        
       </div>
     </>
   );

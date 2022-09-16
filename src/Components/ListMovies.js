@@ -17,6 +17,7 @@ const ListMovies = ({ Movies, searchName, searchRate }) => {
           imageUrl={movie.imgUrl}
           date={movie.date}
           rate={movie.rate}
+          id={movie._id}
         />
       ))}
     </div>
